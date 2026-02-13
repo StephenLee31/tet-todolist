@@ -192,118 +192,151 @@ const styles = {
   page: {
     minHeight: "100vh",
     background: "linear-gradient(135deg,#fff7ed,#ffedd5,#fef3c7)",
-    padding: 24,
+    padding: 16,
     fontFamily: "system-ui, sans-serif",
+    display: "flex",
+    justifyContent: "center",
   },
+
   container: {
-    maxWidth: 800,
-    margin: "0 auto",
+    width: "100%",
+    maxWidth: 520,          // quan trọng: nhỏ lại cho mobile
     background: "white",
     borderRadius: 16,
-    padding: 24,
+    padding: 16,            // giảm padding
     boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
   },
+
   title: {
-    fontSize: 32,
+    fontSize: 24,           // nhỏ lại cho mobile
     fontWeight: 800,
     textAlign: "center",
-    marginBottom: 16,
+    marginBottom: 12,
   },
+
   progressBarWrap: {
     width: "100%",
-    height: 14,
+    height: 12,
     background: "#e5e7eb",
     borderRadius: 999,
     overflow: "hidden",
   },
+
   progressBar: {
     height: "100%",
     background: "linear-gradient(90deg,#fb923c,#f43f5e)",
   },
+
   progressText: {
     textAlign: "center",
     fontWeight: 600,
     marginTop: 8,
+    fontSize: 14,
   },
+
   tabs: {
     display: "flex",
     gap: 8,
     flexWrap: "wrap",
     justifyContent: "center",
-    margin: "16px 0",
+    margin: "14px 0",
   },
+
   tab: {
-    padding: "8px 14px",
+    padding: "6px 12px",
     borderRadius: 999,
     border: "1px solid #ddd",
     background: "white",
     cursor: "pointer",
+    fontSize: 14,
   },
+
   tabActive: {
     background: "#111827",
     color: "white",
   },
+
   inputRow: {
     display: "flex",
     gap: 8,
-    marginBottom: 16,
+    marginBottom: 14,
+    width: "100%",
   },
+
   input: {
     flex: 1,
     padding: 10,
     borderRadius: 8,
     border: "1px solid #ddd",
     fontSize: 16,
+    minWidth: 0,          // 🔥 fix tràn input trên mobile
   },
+
   addBtn: {
-    padding: "10px 16px",
+    padding: "10px 14px",
     borderRadius: 8,
     border: "none",
     background: "#111827",
     color: "white",
     cursor: "pointer",
+    whiteSpace: "nowrap", // 🔥 không cho chữ xuống dòng
   },
+
   card: {
     border: "1px solid #eee",
     borderRadius: 12,
-    padding: 16,
+    padding: 14,
   },
+
   itemRow: {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
     padding: "8px 0",
     borderBottom: "1px solid #f3f4f6",
+    gap: 8,
   },
+
   itemLeft: {
     display: "flex",
     alignItems: "center",
     gap: 10,
+    flex: 1,
+    minWidth: 0,
   },
+
   itemText: {
-    fontSize: 18,
+    fontSize: 16,
+    wordBreak: "break-word", // 🔥 text dài không phá layout
   },
+
   itemDone: {
     textDecoration: "line-through",
     opacity: 0.5,
   },
+
   actions: {
     display: "flex",
-    gap: 8,
+    gap: 6,
+    flexShrink: 0,
   },
+
   editBtn: {
-    padding: "6px 10px",
+    padding: "6px 8px",
     borderRadius: 6,
     border: "1px solid #ddd",
     background: "white",
     cursor: "pointer",
+    fontSize: 12,
   },
+
   deleteBtn: {
-    padding: "6px 10px",
+    padding: "6px 8px",
     borderRadius: 6,
     border: "1px solid #f87171",
     background: "#fee2e2",
     color: "#b91c1c",
     cursor: "pointer",
+    fontSize: 12,
   },
 };
